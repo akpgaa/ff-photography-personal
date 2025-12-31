@@ -10,7 +10,10 @@ export default function QrPage() {
     if (e.target.name == "Name") setFunctionName(e.target.value);
     if (e.target.name == "url") setUrl(e.target.value);
   }
-
+  const origin =
+    typeof window !== "undefined" && window.location.origin
+      ? window.location.origin
+      : "";
   let qrLink = "";
   // Client-side-only code
   if (origin) {
@@ -22,7 +25,7 @@ export default function QrPage() {
       <div className="border-b rounded w-2/6 mx-auto my-8"></div>
 
       <div className=" w-full mb-24">
-        <div className="py-lg-md d-flex flex">
+        <div className="py-lg-md d-flex">
           <div className="flex-1">
             <div
               style={{
