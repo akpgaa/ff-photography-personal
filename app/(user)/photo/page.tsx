@@ -9,7 +9,7 @@ import vol1 from "../../../public/images/fflogo.jpg";
   instagram: "https://www.instagram.com/freeze_frame_studio/",
   maps: "https://maps.app.goo.gl/h9dYCV8drRKAxi4VA",
 };
-function Photo() {
+function PhotoAlbum() {
   const router = useSearchParams();
   const [name, url] = [router?.get("name"), router?.get("url")];
   const [isURL, setIsURL] = useState(false);
@@ -18,3 +18,15 @@ function Photo() {
     typeof window !== "undefined" && window.location.origin
       ? window.location.origin
       : "";
+
+  let qrLink = "";
+  // Client-side-only code
+  if (origin) {
+    qrLink = `${origin}/photo/${name}?url=${url}`;
+  }
+
+  const newUrl = isURL ? qrLink : socialLinks.instagram;
+  
+}
+
+export default PhotoAlbum;
