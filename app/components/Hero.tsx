@@ -45,6 +45,7 @@ function Hero() {
       <div className="text-gray-600 mt-2 sm:mt-0 md:text-lg md:pt-2">
         <p className="sm:text-right">Meenatchipettai, Kurinjipadi</p>
         <p className="sm:text-right">Tamil Nadu 607302</p>
+        <p className="sm:text-right">8072274887</p>
       </div>
     </div>
   );
