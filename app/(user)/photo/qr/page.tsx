@@ -14,7 +14,7 @@ export default function QrPage() {
   let qrLink = "";
   // Client-side-only code
   if (origin) {
-    qrLink = `${origin}/photo/${functionName}?url=${url}`;
+    qrLink = `${origin}/photo?url=${url}&name=${functionName}`;
   }
   return (
     <div className="px-4 lg:px-8">
