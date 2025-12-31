@@ -3,7 +3,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "fix-edge-imports": "find .netlify/edge-functions -type f -name '*.ts' -exec sed -i \"s/assert { type: 'json' }/with { type: 'json' }/g\" {} +",
+    "netlify-build": "npm run build && npm run fix-edge-imports"
   },
   "dependencies": {
     "@next/font": "^13.2.4",
