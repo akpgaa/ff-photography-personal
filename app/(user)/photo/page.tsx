@@ -26,7 +26,9 @@ function PhotoAlbum() {
   }
 
   const newUrl = isURL ? qrLink : socialLinks.instagram;
-  
+  return (
+    
+  );
 }
 
 export default PhotoAlbum;
