@@ -10,6 +10,7 @@ interface Props {
   visible?: boolean;
   buttonText: string;
   url: string;
+  isURL?: boolean;
   handleClick: () => void;
 }
 
@@ -21,6 +22,7 @@ function PresetCard({
   downloadLocation,
   visible = false,
   buttonText = "",
+  isURL,
   url,
   handleClick,
 }: Props) {
@@ -45,15 +47,28 @@ function PresetCard({
           <p className="text-gray-700 text-sm md:text-base">{description}</p>
         </div>
 
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener"
-          onClick={handleClick}
-          className={`text-center text-white bg-[#FFC303] hover:bg-[#FFC303] focus:ring transition duration-200 rounded shadow px-5 py-1`}
-        >
-          {buttonText}
-        </a>
+        {isURL ? (
+          <a
+            key="isURL"
+            href={url}
+            target="_blank"
+            rel="noopener"
+            onClick={handleClick}
+            className={`text-center text-white bg-[#FFC303] hover:bg-[#FFC303] focus:ring transition duration-200 rounded shadow px-5 py-1`}
+          >
+            {buttonText}
+          </a>
+        ) : (
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener"
+            onClick={handleClick}
+            className={`text-center text-white bg-[#FFC303] hover:bg-[#FFC303] focus:ring transition duration-200 rounded shadow px-5 py-1`}
+          >
+            {buttonText}
+          </a>
+        )}
         {/* <button
             type='button'
             onClick={handleDlClick}
