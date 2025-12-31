@@ -84,9 +84,15 @@ function NavBar() {
             onClick={toggleMenu}
             className=" focus:text-gray-500 transition duration-300"
           >
-            <Link href={"/works"}>Works</Link>
+            <Link
+              target="_blank"
+              //  href={'/works'}
+              href="https://www.instagram.com/freeze_frame_studio/"
+            >
+              Works
+            </Link>
           </button>
-
+          {/* 
           <button
             onClick={toggleMenu}
             className="focus:text-gray-500 transition duration-300"
@@ -96,7 +102,7 @@ function NavBar() {
 
           <button className="focus:text-gray-500 transition duration-300">
             <Link href={"/presets"}>Presets</Link>
-          </button>
+          </button> */}
         </div>
       )}
       <div className=" h-px border-b xl:mx-8"></div>
