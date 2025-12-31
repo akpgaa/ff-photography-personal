@@ -15,7 +15,7 @@ function Header() {
             alt='picture of dylan'
           />
         </Link>
-        <h1>Dylan's Blog</h1>
+        <h1>Freeze Frame's Blog</h1>
       </div>
 
       <div>
