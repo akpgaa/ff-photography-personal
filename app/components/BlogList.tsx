@@ -18,12 +18,12 @@ function BlogList({ posts }: Props) {
           >
             <div className='flex flex-col shadow h-full'>
               <div className='relative w-full h-48 xl:h-72 drop-shadow-xl group-hover:scale-105 transition-transform duration-200 ease-out'>
-                <Image
+                {/* <Image
                   className='object-cover object-center'
                   src={urlFor(post.mainImage).url()}
                   alt={post.author.name}
                   fill
-                />
+                /> */}
               </div>
               <div className='p-4 flex flex-col'>
                 <div>
