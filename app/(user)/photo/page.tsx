@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import PresetCard from "../../components/PresetCard";
 import { useSearchParams } from "next/navigation";
-import vol1 from "../../../public/images/fflogo.jpg";
+import vol1 from "../../../public/ff/images/Media3.jpeg";
 
 const socialLinks = {
   url: "/",
