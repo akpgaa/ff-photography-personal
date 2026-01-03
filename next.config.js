@@ -5,6 +5,7 @@ module.exports = {
     appDir: true,
   },
   images: {
-    domains: ['cdn.sanity.io']
-  }
+    domains: ["cdn.sanity.io"],
+    unoptimized: process.env.NETLIFY === "true",
+  },
 };

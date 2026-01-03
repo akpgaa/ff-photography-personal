@@ -4,7 +4,13 @@ import { useRef, useEffect, useState } from "react";
 // import images from "../../lib/images";
 import Image, { StaticImageData } from "next/image";
 
-function Carousel({ title = "", images = [] }) {
+function Carousel({
+  title = "",
+  images = [],
+}: {
+  title: string;
+  images: StaticImageData[];
+}) {
   const [width, setWidth] = useState<number>(0);
   const carousel = useRef<HTMLDivElement>(null);
 

@@ -1,37 +1,19 @@
 import Carousel from "../components/Carousel";
+import imagesByCategory from "../../lib/images";
 
-import imagesWedding from "../../lib/images";
 const carouselList = [
-  {
-    title: "Wedding",
-    images: imagesWedding,
-  },
-  {
-    title: "Birthday",
-    images: imagesWedding,
-  },
-  {
-    title: "Outdoor",
-    images: imagesWedding,
-  },
-  {
-    title: "Baby Shower",
-    images: imagesWedding,
-  },
-  {
-    title: "Puberty",
-    images: imagesWedding,
-  },
+  { title: "Wedding", images: imagesByCategory.wedding },
+  { title: "Bride", images: imagesByCategory.bride },
+  { title: "Outdoor", images: imagesByCategory.outdoor },
+  { title: "Baby Shower", images: imagesByCategory.babyShower },
+  { title: "Baby", images: imagesByCategory.baby },
 ];
+
 export const CarouselList = () => {
   return (
     <>
       {carouselList.map((item) => (
-        <Carousel
-          title={item.title}
-          images={item.images as []}
-          key={item.title}
-        />
+        <Carousel title={item.title} images={item.images} key={item.title} />
       ))}
     </>
   );
