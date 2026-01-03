@@ -1,25 +1,32 @@
 "use client";
 import React, { useState } from "react";
 import PresetCard from "../../components/PresetCard";
+import Hero from "../../components/Hero";
+import Carousel from "../../components/Carousel";
 import { useSearchParams } from "next/navigation";
 import vol1 from "../../../public/images/ff/images/Media3.jpeg";
+import { CarouselList } from "../../components/CarouselList";
 
 const socialLinks = {
   url: "/",
   instagram: "https://www.instagram.com/freeze_frame_studio/",
   maps: "https://maps.app.goo.gl/h9dYCV8drRKAxi4VA",
+  youtube: "https://www.youtube.com/@freezeframe8497",
 };
 
 function PhotoAlbum() {
   const router = useSearchParams();
   const [name, url] = [router?.get("name"), router?.get("url")];
   const [isURL, setIsURL] = useState(false);
-  const text = isURL ? "See Your Photos" : "Follow Us To View Photos";
+  const text = isURL ? "See Your Photos" : "Follow Us To View Your Photos";
 
   const newUrl = isURL ? url : socialLinks.instagram;
   return (
     <div className="w-full px-4 lg:px-8">
-      <h1 className="font-ovo text-5xl mb-8 mt-5">Photos</h1>
+      <Hero />
+      <CarouselList />
+
+      <h1 className="font-ovo text-5xl mb-8 mt-5">Your Photos</h1>
 
       <div className="grid xl:grid-cols-2 xl:space-x-2">
         <PresetCard

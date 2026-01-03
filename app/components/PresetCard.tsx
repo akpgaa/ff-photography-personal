@@ -54,7 +54,7 @@ function PresetCard({
             target="_blank"
             rel="noopener"
             onClick={handleClick}
-            className={`text-center text-white bg-[#FFC303] hover:bg-[#FFC303] focus:ring transition duration-200 rounded shadow px-5 py-1`}
+            className={`text-center m-2 text-white bg-[#FFC303] hover:bg-[#FFC303] focus:ring transition duration-200 rounded shadow px-5 py-1`}
           >
             {buttonText}
           </a>
@@ -64,7 +64,7 @@ function PresetCard({
             target="_blank"
             rel="noopener"
             onClick={handleClick}
-            className={`text-center text-white bg-[#FFC303] hover:bg-[#FFC303] focus:ring transition duration-200 rounded shadow px-5 py-1`}
+            className={`text-center m-2 text-white bg-[#FFC303] hover:bg-[#FFC303] focus:ring transition duration-200 rounded shadow px-5 py-1`}
           >
             {buttonText}
           </a>
